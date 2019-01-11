@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Your Account</title>
+  	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+	<!-- <script src="{{url_for('static', filename='js/index.js')}}"></script> -->
+  
+</head>
+  <div class="wrapper">
+
+	<div class="container">
+		<h1>Welcome <img src="{{url_for('static',filename='img/logo-uit.png') }}" alt=""></h1>
+		<h2>Fill in this form</h2>
+	 {% block body %}
+	 {% if session['logged_in'] %}
+	 
+	 {% else %}
+		<form class="form" action="/login" method="POST">
+			<input type="text" placeholder="Username" id="username">
+			<input type="password" placeholder="Password" id="password">
+			<button type="submit" id="login-button" onclick="validate()">Login</button>
+		</form>{% else %}>	
+	{% endblock %}
+
+	</div>
+			
+	<ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+  
+
+  
+
+
+
+
+
+
+
+
+</html
+
